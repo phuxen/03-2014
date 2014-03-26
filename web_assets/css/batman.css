@@ -1,0 +1,578 @@
+@import "../fonts/leckerli-one/leckerli-one.css";
+
+@import "../fonts/roboto_light_macroman/stylesheet.css";
+
+@import "../fonts/roboto_regular_macroman/stylesheet.css";
+
+@import "../fonts/roboto_bold_macroman/stylesheet.css";
+
+@import "../fonts/roboto_black_macroman/stylesheet.css";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* -----------------------------------------------------------------------------------------
+
+COLOURS
+
+----------------------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------------------
+
+WIDTHS & HEIGHTS
+
+----------------------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------------------
+
+TYPOGRAPHY
+
+----------------------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------------------
+
+Useful classes
+
+----------------------------------------------------------------------------------------- */
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.displayNone {
+  display: none!important;
+}
+.clear {
+  clear: both;
+  float: none;
+}
+.clear:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* =========================================================================================
+
+GLOBAL
+
+========================================================================================= */
+body,
+html {
+  height: 100%;
+}
+html,
+html a {
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  color: #6a6a6a;
+  font-size: 18px;
+  font-family: "robotoregular", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  background: #f5f5f5;
+}
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
+}
+.wrapper {
+  margin: 0 auto;
+  height: inherit;
+}
+.nav {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+  background: rgba(245, 245, 245, 0.95);
+  position: fixed;
+  height: 72px;
+  width: 100%;
+  padding: 16px 0 0;
+  z-index: 99;
+}
+.nav .navInner {
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: center;
+}
+.nav .navInner .brand {
+  color: #3a3a3a;
+  font-family: "robotolight", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  display: block;
+  letter-spacing: -1px;
+}
+.nav .navInner .socialLinks {
+  list-style: none;
+  float: right;
+}
+.nav .navInner .socialLinks li {
+  float: left;
+  padding: 5px 0 0 15px;
+}
+.nav .navInner .socialLinks li a {
+  color: #5a5a5a;
+}
+.mainContent {
+  height: 100%;
+  /* iosSlider */
+
+}
+.mainContent .hero {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+  background-color: #049cdb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  padding-top: 102px;
+  padding-bottom: 30px;
+  display: table;
+}
+.mainContent .hero .heroInner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.mainContent .hero h1 {
+  font-family: "robotoblack", Helvetica, Arial, sans-serif;
+  font-size: 170px;
+  line-height: 0.8;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.mainContent .article {
+  padding: 60px;
+}
+.mainContent .article .articleInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.mainContent .iosslider {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  position: relative;
+  background: #e9e9e9;
+  width: 100%;
+  height: auto!important;
+  float: left;
+  /* slider */
+
+}
+.mainContent .iosslider .slider {
+  /* required */
+
+  width: 100%;
+  background: #f5f5f5;
+  /* slide */
+
+}
+.mainContent .iosslider .slider .slide {
+  /* required */
+
+  float: left;
+  width: 100%;
+}
+.mainContent .iosslider .slider .slide .image {
+  height: 400px;
+}
+.mainContent .iosslider .slider .slide .copy {
+  padding: 12px 15px 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.mainContent .iosslider .slider .slide .copy h2 {
+  margin: 0;
+}
+.mainContent .iosslider .slider .slide .copy h3 {
+  margin: 0;
+  color: #5a5a5a;
+  font-family: "robotoregular", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+.mainContent .iosslider .slider .slide .copy h5 {
+  margin: 0;
+  color: #999;
+  font-family: "robotoregular", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+.mainContent .iosslider .slider .slide .copy p {
+  padding: 20px 0 0;
+}
+.mainContent .iosslider .slider .slide.one .image {
+  background: #ffc40d;
+}
+.mainContent .iosslider .slider .slide.two .image {
+  background: #26c1bd;
+}
+.mainContent .iosslider .sliderPrev,
+.mainContent .iosslider .sliderNext {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  position: absolute;
+  z-index: 9999;
+  top: 185px;
+  height: 50px;
+  width: 50px;
+  background: #f5f5f5;
+  font-size: 58px;
+  font-family: "robotolight", Helvetica, Arial, sans-serif;
+  line-height: 0.7;
+  text-align: center;
+}
+.mainContent .iosslider .sliderPrev:hover,
+.mainContent .iosslider .sliderNext:hover {
+  background: #fff;
+  color: #2a2a2a;
+}
+.mainContent .iosslider .sliderPrev {
+  left: 20px;
+}
+.mainContent .iosslider .sliderNext {
+  right: 20px;
+}
+.mainContent .footer {
+  background: #6a6a6a;
+  padding: 60px;
+  width: 100%;
+  float: left;
+}
+.mainContent .footer .footerInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.mainContent .footer .footerInner .footerContact {
+  list-style: none;
+}
+.mainContent .footer .footerInner .footerContact .footerContactItem {
+  float: left;
+  padding: 0 30px 0 0;
+}
+.mainContent .footer .footerInner .footerContact .footerContactItem a {
+  color: #f5f5f5;
+}
+/* =========================================================================================
+
+TYPOGRAPHY
+
+========================================================================================= */
+/* -------------------------------------------------------
+Headers
+------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+h1 {
+  color: #2a2a2a;
+  font-family: "robotolight", Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+h1.homeHeader {
+  font-size: 3em;
+  text-align: center;
+}
+h1 em {
+  text-transform: none;
+  color: #6a6a6a;
+}
+h2 {
+  color: #2a2a2a;
+  font-family: "robotolight", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+h2 em {
+  text-transform: none;
+  color: #6a6a6a;
+}
+h3 {
+  color: #2a2a2a;
+  font-family: "robotolight", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+h3 em {
+  text-transform: none;
+  color: #6a6a6a;
+}
+h4 {
+  color: #2a2a2a;
+  font-family: "robotoregular", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+h4 em {
+  text-transform: none;
+  color: #6a6a6a;
+}
+h5 {
+  color: #2a2a2a;
+  font-family: "robotoregular", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+h5 em {
+  text-transform: none;
+  color: #6a6a6a;
+}
+/* -------------------------------------------------------
+Paragraphs and other
+------------------------------------------------------- */
+p,
+address {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+em {
+  font-style: italic;
+  font-weight: normal;
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+strong {
+  font-weight: normal;
+  font-family: "robotobold", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #26c1bd;
+  text-decoration: none;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+a:hover {
+  color: #1e9693;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.superscript {
+  vertical-align: super;
+  font-size: 70%;
+}
+.subscript {
+  vertical-align: bottom;
+  font-size: 70%;
+}
+::selection {
+  background: #26c1bd;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #26c1bd;
+  color: #ffffff;
+}
+/* =========================================================================================
+
+Desktop
+
+========================================================================================= */
+@media screen and (min-device-width: 1025px) and (max-width: 1380px) {
+  
+}
+/* =========================================================================================
+
+Tablet
+
+========================================================================================= */
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  .mainContent .hero {
+    padding-left: 60px;
+  }
+  .mainContent .hero h1 {
+    font-size: 120px;
+    line-height: 0.6;
+  }
+  .mainContent .article {
+    padding: 20px;
+  }
+}
+/* =========================================================================================
+
+Mobile
+
+========================================================================================= */
+@media screen and (max-width: 719px) {
+  .mainContent .hero {
+    min-height: 300px;
+    padding-left: 20px;
+  }
+  .mainContent .hero h1 {
+    font-size: 80px;
+    line-height: 0.6;
+  }
+  .mainContent .article {
+    padding: 30px;
+  }
+}
