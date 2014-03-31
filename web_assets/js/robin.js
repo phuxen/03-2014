@@ -15,7 +15,7 @@ $(document).ready(function($){
 			navNextSelector: $('.sliderNext'),
 			navPrevSelector: $('.sliderPrev'),
 			infiniteSlider: false,
-			keyboardControls: true	    
+			keyboardControls: true
 		});	
 	});
 	

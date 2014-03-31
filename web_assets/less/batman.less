@@ -16,7 +16,7 @@ body, html {
   	height: 100%;
 }
 html, html a {
-    -webkit-font-smoothing: antialiased;
+    //-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 	font-family:@bodyFamily; 
 	font-weight: 300;
 	line-height:1.6;
-	background: #f5f5f5;  
+	background: #f6f6f6;  
 }
 
 
@@ -44,8 +44,8 @@ body {
 		//.boxShadow (0 3px 10px -4px rgba(0,0,0,0.25));
 		.noSelect;
 		cursor: default;
-		background: rgba(245,245,245,0.95);
-		//background: #fff;
+		background: rgba(245,245,245,0.98);
+		//background: #f6f6f6;
 		position:fixed;
 		height:@navHeight;
 		width:100%;
@@ -79,19 +79,20 @@ body {
 	}
 	
 	@articleWidth: 800px;
+	@articlePadding: 60px;
 	
 	.mainContent {
 		height: 100%;
 		.hero {
 			.noSelect;
 			cursor: default;
-			background-color: @blue;
-			//background-image: url('../images/_heros/lead.jpg');
+			background-color: @orange;
+			background-image: url('../images/_heros/lead.jpg');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
 			width: 100%;
-			min-height: 100%;
+			min-height: 80%;
 			position: relative;
 			padding-top: @navHeight + 30px;
 			//padding-left: 60px;
@@ -112,10 +113,13 @@ body {
 			}
 		}
 		.article {
-			padding: 60px;
+			padding: @articlePadding;
 			.articleInner {
 				max-width:@articleWidth;
 				margin: 0 auto;
+			}
+			&.slideCopy {
+				padding: (@articlePadding / 2) @articlePadding;
 			}
 		}
 		.iosslider {
@@ -134,19 +138,25 @@ body {
 				/* required */
 				width: 100%;
 				//height: auto;
-				background: #f5f5f5;
+				background: #f6f6f6;
 				.slide {
 					/* required */
 					float: left;
 					width: 100%;
-					//height: auto;
 					.image {
-						height: 400px;
+						.imageInner {
+							height: 500px;
+							background-repeat: no-repeat;
+							background-size: contain;
+							background-position: center top;
+							max-width:@articleWidth;
+							margin: 0 auto;
+						}
 					}
-					.copy {
-						padding: 12px 15px 15px;
-						max-width: @articleWidth;
-						margin: 0 auto;
+					.article {
+						//padding: 15px 0;
+						//max-width: @articleWidth;
+						//margin: 0 auto;
 						h2 {
 							margin: 0;
 						}
@@ -166,14 +176,30 @@ body {
 							padding: 20px 0 0;
 						}
 					}
-					&.one {
+					&.bw {
 						.image {
-							background: @yellow;
+							//background-color: #ddd;
+							background: @teal;
+							.imageInner {
+								background-image: url('../images/_heros/Hero_700-BurberryWorld-B.png');
+							}
 						}
 					}
 					&.two {
 						.image {
-							background: @teal;
+							background: @yellow;
+							.imageInner {
+								background-image: url('../images/_heros/Hero_700-Smash-A.png');
+							}
+						}
+					}
+					&.ltkd {
+						.image {
+							background: #e9e9e9;
+							.imageInner {
+								background-image: url('../images/_heros/Hero_400-LTKD-A.jpg');
+								background-position: center bottom;
+							}
 						}
 					}
 					
@@ -190,18 +216,18 @@ body {
 				.transition(.1s linear all);
 				position: absolute;
 				z-index: 9999;
-				top: 185px;
+				top: 235px;
 				
 				height: 50px;
 				width: 50px;
 				
-				background: #f5f5f5;
+				background: #f6f6f6;
 				font-size: @bodyFontSize + 40;
 				font-family: @logo;
-				line-height: 0.7;
+				line-height: 0.65;
 				text-align: center;
 				&:hover {
-					background: #fff;
+					//background: #fff;
 					color: @headerColor;
 				}
 			}
@@ -215,25 +241,29 @@ body {
 		/* iosSlider */
 		
 		.footer {
-			background: #6a6a6a;
+			background: @themeColor;
 			padding: 60px;
 			width: 100%;
 			float: left;
 			.footerInner {
 				max-width:@articleWidth;
 				margin: 0 auto;
+				h5 {
+					color: #f6f6f6;
+					opacity: 0.8;
+				}
 				.footerContact {
 					list-style: none;
 					.footerContactItem {
 						float: left;
 						padding: 0 30px 0 0;
 						a {
-							color: #f5f5f5;
+							color: #f6f6f6;
 						}
 					}
-				}
-			}
-		}
+				} /* footerContact */
+			} /* footerInner */
+		} /* footer */
 	}
 
 /* =========================================================================================
@@ -360,11 +390,11 @@ Tablet
 			padding-left: 60px;
 			h1 {
 				font-size: 120px;
-				line-height: 0.6;
+				line-height: 0.8;
 			}
 		}
 		.article {
-			padding: 20px;
+			padding: 40px;
 			.articleInner {
 				
 			}
@@ -380,20 +410,69 @@ Mobile
 ========================================================================================= */
 @media screen and (max-width: 719px) {
 	
+	@mobilePadding: 30px;
+	
 	.mainContent {
 		.hero {
 			min-height: 300px;
-			padding-left: 20px;
+			//padding-left: 20px;
 			h1 {
 				font-size: 80px;
-				line-height: 0.6;
+				line-height: 0.7;
 			}
 		}
 		.article {
-			padding: 30px;
+			padding: @mobilePadding;
 			.articleInner {
 				
 			}
+			&.slideCopy {
+				padding: @mobilePadding;
+			}
+		}
+		.iosslider {
+			.slider {
+				.slide {
+					.image {
+						.imageInner {
+							height: 300px;
+							background-size: contain;
+							background-position: center top;
+							margin: 0 50px;
+						}
+					}
+					&.ltkd {
+						.image {
+							.imageInner {
+								background-image: url('../images/_heros/Hero_400-LTKD-B.jpg');
+							}
+						}
+					}
+				}
+				/* slide */
+			}
+			/* slider */
+			.sliderPrev,
+			.sliderNext {
+				.roundCorners (0px);
+				top: 0;
+				padding-top: 135px;
+				height: 300px;
+				background: rgba(245,245,245,0.2);
+				&:hover {
+					background: rgba(245,245,245,0.5);
+				}
+			}
+			.sliderPrev {
+				left: 0;
+			}
+			.sliderNext {
+				right:0;
+			}
+		}
+		/* /iosslider */
+		.footer {
+			padding: @mobilePadding;
 		}
 	}
 	

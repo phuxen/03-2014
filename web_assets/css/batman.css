@@ -187,17 +187,13 @@ body,
 html {
   height: 100%;
 }
-html,
-html a {
-  -webkit-font-smoothing: antialiased;
-}
 body {
   color: #6a6a6a;
   font-size: 18px;
   font-family: "robotoregular", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  background: #f5f5f5;
+  background: #f6f6f6;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -223,7 +219,7 @@ body {
   -o-user-select: none;
   user-select: none;
   cursor: default;
-  background: rgba(245, 245, 245, 0.95);
+  background: rgba(245, 245, 245, 0.98);
   position: fixed;
   height: 72px;
   width: 100%;
@@ -258,6 +254,8 @@ body {
   height: 100%;
   /* iosSlider */
 
+  /* footer */
+
 }
 .mainContent .hero {
   -webkit-touch-callout: none;
@@ -268,12 +266,13 @@ body {
   -o-user-select: none;
   user-select: none;
   cursor: default;
-  background-color: #049cdb;
+  background-color: #f89406;
+  background-image: url('../images/_heros/lead.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 100%;
+  min-height: 80%;
   position: relative;
   padding-top: 102px;
   padding-bottom: 30px;
@@ -298,6 +297,9 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+.mainContent .article.slideCopy {
+  padding: 30px 60px;
+}
 .mainContent .iosslider {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -318,7 +320,7 @@ body {
   /* required */
 
   width: 100%;
-  background: #f5f5f5;
+  background: #f6f6f6;
   /* slide */
 
 }
@@ -328,37 +330,50 @@ body {
   float: left;
   width: 100%;
 }
-.mainContent .iosslider .slider .slide .image {
-  height: 400px;
-}
-.mainContent .iosslider .slider .slide .copy {
-  padding: 12px 15px 15px;
+.mainContent .iosslider .slider .slide .image .imageInner {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
   max-width: 800px;
   margin: 0 auto;
 }
-.mainContent .iosslider .slider .slide .copy h2 {
+.mainContent .iosslider .slider .slide .article h2 {
   margin: 0;
 }
-.mainContent .iosslider .slider .slide .copy h3 {
+.mainContent .iosslider .slider .slide .article h3 {
   margin: 0;
   color: #5a5a5a;
   font-family: "robotoregular", Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
-.mainContent .iosslider .slider .slide .copy h5 {
+.mainContent .iosslider .slider .slide .article h5 {
   margin: 0;
   color: #999;
   font-family: "robotoregular", Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
-.mainContent .iosslider .slider .slide .copy p {
+.mainContent .iosslider .slider .slide .article p {
   padding: 20px 0 0;
 }
-.mainContent .iosslider .slider .slide.one .image {
-  background: #ffc40d;
+.mainContent .iosslider .slider .slide.bw .image {
+  background: #26c1bd;
+}
+.mainContent .iosslider .slider .slide.bw .image .imageInner {
+  background-image: url('../images/_heros/Hero_700-BurberryWorld-B.png');
 }
 .mainContent .iosslider .slider .slide.two .image {
-  background: #26c1bd;
+  background: #ffc40d;
+}
+.mainContent .iosslider .slider .slide.two .image .imageInner {
+  background-image: url('../images/_heros/Hero_700-Smash-A.png');
+}
+.mainContent .iosslider .slider .slide.ltkd .image {
+  background: #e9e9e9;
+}
+.mainContent .iosslider .slider .slide.ltkd .image .imageInner {
+  background-image: url('../images/_heros/Hero_400-LTKD-A.jpg');
+  background-position: center bottom;
 }
 .mainContent .iosslider .sliderPrev,
 .mainContent .iosslider .sliderNext {
@@ -372,18 +387,17 @@ body {
   transition: 0.1s linear all;
   position: absolute;
   z-index: 9999;
-  top: 185px;
+  top: 235px;
   height: 50px;
   width: 50px;
-  background: #f5f5f5;
+  background: #f6f6f6;
   font-size: 58px;
   font-family: "robotolight", Helvetica, Arial, sans-serif;
-  line-height: 0.7;
+  line-height: 0.65;
   text-align: center;
 }
 .mainContent .iosslider .sliderPrev:hover,
 .mainContent .iosslider .sliderNext:hover {
-  background: #fff;
   color: #2a2a2a;
 }
 .mainContent .iosslider .sliderPrev {
@@ -393,14 +407,22 @@ body {
   right: 20px;
 }
 .mainContent .footer {
-  background: #6a6a6a;
+  background: #d55d82;
   padding: 60px;
   width: 100%;
   float: left;
+  /* footerInner */
+
 }
 .mainContent .footer .footerInner {
   max-width: 800px;
   margin: 0 auto;
+  /* footerContact */
+
+}
+.mainContent .footer .footerInner h5 {
+  color: #f6f6f6;
+  opacity: 0.8;
 }
 .mainContent .footer .footerInner .footerContact {
   list-style: none;
@@ -410,7 +432,7 @@ body {
   padding: 0 30px 0 0;
 }
 .mainContent .footer .footerInner .footerContact .footerContactItem a {
-  color: #f5f5f5;
+  color: #f6f6f6;
 }
 /* =========================================================================================
 
@@ -504,7 +526,7 @@ strong {
   font-family: "robotobold", Helvetica, Arial, sans-serif;
 }
 a {
-  color: #26c1bd;
+  color: #d55d82;
   text-decoration: none;
   -webkit-transition: 0.1s linear all;
   -moz-transition: 0.1s linear all;
@@ -513,7 +535,7 @@ a {
   transition: 0.1s linear all;
 }
 a:hover {
-  color: #1e9693;
+  color: #cb3463;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -526,11 +548,11 @@ a:hover {
   font-size: 70%;
 }
 ::selection {
-  background: #26c1bd;
+  background: #d55d82;
   color: #ffffff;
 }
 ::-moz-selection {
-  background: #26c1bd;
+  background: #d55d82;
   color: #ffffff;
 }
 /* =========================================================================================
@@ -552,10 +574,10 @@ Tablet
   }
   .mainContent .hero h1 {
     font-size: 120px;
-    line-height: 0.6;
+    line-height: 0.8;
   }
   .mainContent .article {
-    padding: 20px;
+    padding: 40px;
   }
 }
 /* =========================================================================================
@@ -564,15 +586,61 @@ Mobile
 
 ========================================================================================= */
 @media screen and (max-width: 719px) {
+  .mainContent {
+    /* /iosslider */
+  
+  }
   .mainContent .hero {
     min-height: 300px;
-    padding-left: 20px;
   }
   .mainContent .hero h1 {
     font-size: 80px;
-    line-height: 0.6;
+    line-height: 0.7;
   }
   .mainContent .article {
+    padding: 30px;
+  }
+  .mainContent .article.slideCopy {
+    padding: 30px;
+  }
+  .mainContent .iosslider {
+    /* slider */
+  
+  }
+  .mainContent .iosslider .slider {
+    /* slide */
+  
+  }
+  .mainContent .iosslider .slider .slide .image .imageInner {
+    height: 300px;
+    background-size: contain;
+    background-position: center top;
+    margin: 0 50px;
+  }
+  .mainContent .iosslider .slider .slide.ltkd .image .imageInner {
+    background-image: url('../images/_heros/Hero_400-LTKD-B.jpg');
+  }
+  .mainContent .iosslider .sliderPrev,
+  .mainContent .iosslider .sliderNext {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    top: 0;
+    padding-top: 135px;
+    height: 300px;
+    background: rgba(245, 245, 245, 0.2);
+  }
+  .mainContent .iosslider .sliderPrev:hover,
+  .mainContent .iosslider .sliderNext:hover {
+    background: rgba(245, 245, 245, 0.5);
+  }
+  .mainContent .iosslider .sliderPrev {
+    left: 0;
+  }
+  .mainContent .iosslider .sliderNext {
+    right: 0;
+  }
+  .mainContent .footer {
     padding: 30px;
   }
 }
