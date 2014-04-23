@@ -47,7 +47,7 @@ body {
 		background: rgba(245,245,245,0.98);
 		//background: #f6f6f6;
 		position:fixed;
-		height:@navHeight;
+		min-height:@navHeight;
 		width:100%;
 		padding: 16px 0 0;
 		z-index: 99;
@@ -86,8 +86,8 @@ body {
 		.hero {
 			.noSelect;
 			cursor: default;
-			background-color: @orange;
-			background-image: url('../images/_heros/lead.jpg');
+			background-color: @pink;
+			//background-image: url('../images/_heros/lead.jpg');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
@@ -95,8 +95,10 @@ body {
 			min-height: 80%;
 			position: relative;
 			padding-top: @navHeight + 30px;
-			//padding-left: 60px;
 			padding-bottom: 30px;
+			
+			padding-left: 20px;
+			padding-right: 20px;
 			
 			display: table;
 			.heroInner {
@@ -411,10 +413,10 @@ Mobile
 @media screen and (max-width: 719px) {
 	
 	@mobilePadding: 30px;
-	
+		
 	.mainContent {
 		.hero {
-			min-height: 300px;
+			min-height: 100%;
 			//padding-left: 20px;
 			h1 {
 				font-size: 80px;
